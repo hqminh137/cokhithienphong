@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(251, 250, 226);
+}
+body {
+  position: relative;
+}
+.sticky {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  /* background-color: transparent; */
+}
+.hotline {
+  margin-bottom: 15px;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.text_upperCase {
+  text-transform: uppercase;
+}
+.wrapper {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.header {
+  display: block;
+  color: rgb(246, 71, 71);
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  margin-bottom: 30px;
+}
+.header__mainContent {
+  padding: 0 50px;
+  font-size: 45px;
+}
+.header__content {
+  color: rgb(71, 68, 239);
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: auto;
+  height: 80px;
+  margin-bottom: 10px;
+}
+.body__wrapper {
+  margin-bottom: 30px;
+}
+.content {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 30px;
+}
+.content__introduce,
+.content__service {
+  font-size: 24px;
+  color: rgb(71, 68, 239);
+  border: 2px solid rgb(73, 255, 92);
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.content__benefit {
+  text-align: center;
+  margin: 16px 0;
+  font-size: 14px;
+  color: rgb(246, 71, 71);
+}
+.content__benefit span {
+  padding: 0 10px;
+}
+
+.compare {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 30px;
+  font-size: 24px;
+  color: rgb(246, 71, 71);
+  text-align: center;
+  margin-bottom: 50px;
+}
+.before__maitain--content,
+.after__maitain--content {
+  margin-bottom: 20px;
+  border: 2px solid rgb(255, 100, 73);
+  padding: 10px;
+  background-color: rgb(73, 255, 92);
+  border-radius: 5px;
+}
+.maintain_image {
+  object-fit: cover;
+  width: 400px;
+  height: 400px;
+}
+
+.price {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(73, 255, 92);
+  width: 100%;
+  text-align: center;
+  color: rgb(246, 71, 71);
+  overflow-x: auto;
+}
+
+td,
+th {
+  border: 2px solid rgb(73, 255, 92);
+  padding: 14px;
+  background-color: white;
+}
+
+.contact__header {
+  color: rgb(246, 71, 71);
+  margin: 30px 0;
+  text-align: center;
+}
+
+.contact__content {
+  display: grid;
+  grid-template-columns: auto;
+}
+.contact__content--left {
+  color: rgb(71, 68, 239);
+}
+.contact__content--left a {
+  display: block;
+  text-decoration: none;
+  color: rgb(71, 68, 239);
+  margin-bottom: 10px;
+}
+.contact__company {
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.contact__address {
+  margin-bottom: 10px;
+}
+.contact__phone {
+  color: rgb(246, 71, 71) !important;
+}
+.contact__content--right {
+  text-align: center;
+}
+.contact__qr {
+  width: auto;
+  height: 200px;
+}
+.trin-trin {
+  animation-name: trin;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes trin {
+  from {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  20%,
+  32%,
+  44%,
+  56%,
+  68% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  23%,
+  35%,
+  47%,
+  59%,
+  71% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  26%,
+  38%,
+  50%,
+  62%,
+  74% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+  29%,
+  41%,
+  53%,
+  65%,
+  77% {
+    transform: rotate3d(0, 0, 1, -15deg);
+  }
+  80% {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+/* reponsive */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px !important;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  .content__benefit {
+    font-size: 20px;
+    width: 100%;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 40px 0;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .compare {
+    grid-template-columns: auto auto;
+  }
+  .contact__content {
+    grid-template-columns: auto auto;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .header {
+    display: flex;
+    margin-bottom: 0;
+  }
+}
